@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Useless Button</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px 50px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      background-color: #2980b9;
+    }
+
+    .button:active {
+      transform: scale(0.95);
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #555;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Welcome to the Useless Button!</div>
+    <button class="button" id="uselessButton">Click me for absolutely nothing!</button>
+    <div class="message" id="message">You clicked the button, but absolutely nothing happened. 😎</div>
+  </div>
+
+  <script>
+    // Getting the button and message elements
+    const uselessButton = document.getElementById('uselessButton');
+    const message = document.getElementById('message');
+
+    // Adding event listener to the button
+    uselessButton.addEventListener('click', () => {
+      message.style.display = 'block';  // Show the message
+      setTimeout(() => {
+        message.style.display = 'none';  // Hide the message after 2 seconds
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
+
+
